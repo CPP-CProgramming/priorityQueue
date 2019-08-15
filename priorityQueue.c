@@ -51,3 +51,23 @@ int pop(priorityQueue* pq)
 	} 
 	return res;
 }
+
+int main(void)
+{
+	int n, data;
+	scanf("%d", &n);
+	priorityQueue pq;
+	pq.count = 0;
+	for (int i = 0; i < n; i++)
+	{
+		scanf("%d", &data);
+		push(&pq, data);
+	}
+	for (int i = 0; i < n; i++)
+	{
+		int data = pop(&pq);
+		printf("%d ", data);
+	}
+	system("pause");
+	return 0;
+}
